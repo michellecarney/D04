@@ -5,29 +5,34 @@
 # The following program counts the number of times the letter 'a' appears in a
 # string:
 
-#     word = 'banana'
-#     count = 0
-#     for letter in word:
-#         if letter == 'a':
-#             count = count + 1
-#     print(count)
+# word = 'banana'
+# count = 0
+# for letter in word:
+#     if letter == 'a':
+#         count = count + 1
+# print(count)
 
 # Encapsulate this code in a function named "count", and generalize it so that
 # it accepts the string and the letter as arguments.
 
 ###############################################################################
-# Imports
 
 
-# Body
+def count(stringinput, letterinput):
+    count = 0
+    for letter in stringinput:
+        if letter == letterinput:
+            count = count + 1
+    print(count)
+
 
 
 ###############################################################################
 def main():
 
-    # Remove print("Hello World!") and add several functions calls to count()
-    # below, passing various strings and letters
-    print("Hello World!")
+    count('caaaaaaaaaaat','a')
+    count('meWoW', 'W')
+    count('coding is fun', 'i')
 
 
 if __name__ == '__main__':

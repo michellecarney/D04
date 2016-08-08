@@ -14,7 +14,9 @@
 
 
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
+    """It is only checking if the whole string is lowercase, 
+    not if there are any lowercase letters in the whole string. 
+    gives boolean output if all lower = true
     """
     for c in s:
         if c.islower():
@@ -24,7 +26,7 @@ def any_lowercase1(s):
 
 
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
+    """It is only checking if the string 'c' is lowercase, not the string input var s
     """
     for c in s:
         if 'c'.islower():
@@ -34,7 +36,7 @@ def any_lowercase2(s):
 
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
+    """Evaluating based on the entire string?
     """
     for c in s:
         flag = c.islower()
@@ -42,7 +44,8 @@ def any_lowercase3(s):
 
 
 def any_lowercase4(s):
-    """Explain what is wrong, if anything, here.
+    """Should work? flag = false doesn't matter because even if it is false 
+    and one is true then it is true
     """
     flag = False
     for c in s:
@@ -51,7 +54,8 @@ def any_lowercase4(s):
 
 
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
+    """ even if c.islower() is true, the 'if not' won't run if c.lower() (if all of c) is false,
+    so incorrectly labels camel case as false
     """
     for c in s:
         if not c.islower():
@@ -61,13 +65,28 @@ def any_lowercase5(s):
 
 ###############################################################################
 def main():
+    a = 'howdy'
+    b = 'HoWdY'
+    c = 'HOWDY'
+    print(any_lowercase1(a))
+    print(any_lowercase1(b))
+    print(any_lowercase1(c))
 
-    # Remove print("Hello World!") and for each function above that is wrong,
-    # call that function with a string for which the function returns
-    # incorrectly.
-    # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
+    print(any_lowercase2(a))
+    print(any_lowercase2(b))
+    print(any_lowercase2(c))
 
+    print(any_lowercase3(a))
+    print(any_lowercase3(b))
+    print(any_lowercase3(c))
+
+    print(any_lowercase4(a))
+    print(any_lowercase4(b))
+    print(any_lowercase4(c))
+
+    print(any_lowercase5(a))
+    print(any_lowercase5(b))
+    print(any_lowercase5(c))
 
 if __name__ == '__main__':
     main()

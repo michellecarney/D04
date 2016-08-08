@@ -10,10 +10,35 @@
 #     - only lets the user guess five times
 #         - then ends the program
 ################################################################################
-# Imports
+import random
 
 
 # Body
+
+n = random.randrange(1,25)
+guess = ''
+guesscount = 0
+
+while guesscount < 5:
+    try:
+        guess = int(input('Guess a number!: '))
+        if guesscount < 5:
+            if guess == n:
+                print('WINNER')
+                guesscount = guesscount + 1
+                break
+            elif guess < n:
+                print('too low')
+                guesscount = guesscount + 1
+                continue
+            elif guess > n:
+                print('too high')
+                guesscount = guesscount + 1
+                continue
+        else:
+            print('the number was' + str(n))
+    except:
+        print('Please enter a number between 1 and 25')
 
 
 
